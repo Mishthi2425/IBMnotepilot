@@ -1,0 +1,13 @@
+node_modules/
+__pycache__/
+*.pyc
+venv/
+.venv/
+.env
+chroma_db/
+uploads/
+chats/
+*.egg-info/
+dist/
+build/
+.DS_Store
