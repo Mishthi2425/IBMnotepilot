@@ -70,6 +70,16 @@ pip install -r requirements.txt
 
 # Create your .env file
 copy .env.example .env
+
+
+for cmd
+copy .env.example .env
+
+
+for bash
+cp .env.example .env
+
+
 ```
 
 Now edit `backend/.env` and replace the placeholder with your real API key:
@@ -98,8 +108,35 @@ Open **two terminals**:
 **Terminal 1 — Backend:**
 ```bash
 cd backend
-venv\Scripts\activate
+venv\Scripts\activate  
 python -m app.main
+
+-----------or 
+
+source venv/Scripts/activate
+
+So your backend setup becomes:
+
+cd backend
+
+# Create virtual environment
+python -m venv venv
+
+# Activate it in Git Bash
+source venv/Scripts/activate
+
+# Install Python dependencies
+pip install -r requirements.txt
+
+# Create your .env file
+cp .env.example .env
+
+And the run command becomes:
+
+cd backend
+source venv/Scripts/activate
+python -m app.main
+------------------------------
 ```
 Backend runs at `http://localhost:8000`
 
